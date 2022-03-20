@@ -1,0 +1,13 @@
+{
+    "name": "Ridoku",
+    "short_name": "Ridoku",
+    "start_url": "https://thebavariancoder.github.io/index.html",
+    "display": "standalone",
+    "background_color" : "#fff" ,
+    "description": "Unendlich Sudoku für Richi",
+    "icons": [{
+      "src": "",
+      "sizes": "48x48",
+      "type": "image/png"
+    }]
+  }
