@@ -7,7 +7,7 @@
   position: relative;
   border: 1px solid #ddd;
   background: #fff;
-  max-width: 11.11111%;
+  max-width: 10vmin;
 }
 [data-board-size="9"].sudoku-board .sudoku-board-cell:nth-of-type(9n + 1) {
   border-left-width: 2px;
@@ -33,12 +33,10 @@
 }
 .sudoku-board-cell input {
   background: 0 0;
-  font-size: 19.2px;
-  font-size: 1.2rem;
+  font-size: 4vmin;
   text-align: center;
-  width: 2em;
   max-width: 100%;
-  height: 2em;
+  height: 10vmin;
   border: 0;
   position: relative;
   z-index: 1;
@@ -74,11 +72,7 @@ button {
   display: inline-block;
   width: 100%;
 }
-@media (max-width: 23em) {
-  .sudoku-board .candidates {
-    letter-spacing: -2px;
-  }
-}
+
 .showCandidates .candidates {
   display: block;
 }
@@ -95,14 +89,8 @@ button {
   background-color: red;
   color: #fff;
 }
-.sudoku-board {
-  min-height: 21.625rem;
-  margin-bottom: 0.25em;
-}
 .sudoku-board input {
   color: #404040;
-  width: 3em;
-  height: 1.9em;
   cursor: default;
 }
 * {
@@ -160,11 +148,7 @@ button {
 .desktop--only {
   display: none;
 }
-@media (min-width: 40em) {
-  .desktop--only {
-    display: inline-block;
-  }
-}
+
 .modal {
   position: absolute;
   z-index: -1;
@@ -198,9 +182,6 @@ button {
   margin-bottom: 1em;
 }
 .wrap {
-  padding-left: 0.5em;
-  padding-right: 0.5em;
-  width: 400px;
   max-width: 100%;
   margin-left: auto;
   margin-right: auto;
@@ -208,23 +189,13 @@ button {
 .wrap--only-large {
   padding-left: 0;
   padding-right: 0;
+  display: flex;
+    align-items: center;
+    justify-content: center;
 }
-@media (min-width: 30em) {
-  .wrap {
-    width: 490px;
-    padding-left: 1em;
-    padding-right: 1em;
-  }
-  .sudoku-board {
-    min-height: 28.375rem;
-  }
-  .sudoku-board input {
-    font-size: 48px;
-    font-size: 3rem;
-  }
-  .sudoku-board .candidates {
-    font-size: 0.8em;
-  }
+.sudoku-board.js-sudoku-board {
+    width: auto;
+    display: inline-block;
 }
 .header {
   height: 2em;
@@ -290,14 +261,7 @@ button {
 .difficulty .header--extra__menu-button:hover .icon {
   opacity: 1;
 }
-@media (min-width: 30em) {
-  .difficulty .header--extra__menu-button:before {
-    content: "Difficulty: ";
-    font-weight: 400;
-    font-size: 0.8375em;
-    vertical-align: top;
-  }
-}
+
 .touch-controls__items {
   padding-right: 16.67%;
   position: relative;
@@ -349,46 +313,4 @@ button {
   opacity: 0.6;
   font-size: 0.75em;
 }
-@media (min-height: 33.75em) {
-  .header,
-  .sudoku-board {
-    margin-bottom: 1em;
-  }
-  .sudoku-board {
-    min-height: 22.75rem;
-  }
-  .sudoku-board input {
-    height: 2em;
-  }
-  .touch-controls__item-wrap {
-    height: 3em;
-    margin-bottom: 0.5em;
-  }
-}
-@media (min-width: 50em) {
-  .header {
-    margin-bottom: 3em;
-  }
-  .touch-controls {
-    display: none;
-  }
-  .sudoku-board {
-    margin-bottom: 2em;
-  }
-  .sudoku-board input {
-    cursor: text;
-  }
-  .difficulty .menu,
-  .help .menu {
-    left: auto;
-    width: 20em;
-    background: 0 0;
-    border-top: 1px solid silver;
-  }
-  .difficulty .menu__item,
-  .help .menu__item {
-    border-top: 0;
-    border-left: 1px solid silver;
-    border-bottom: 1px solid silver;
-  }
-}
+
